@@ -23,3 +23,10 @@ def return_birthday(name):
         print('{}\'s birthday is {}.'.format(name, birthdays[name]))
     else:
         print('Sadly, we don\'t have {}\'s birthday.'.format(name))
+
+def add_birthday_entry(name, birthday):
+    """Adds a new person and birthday to the birthdays dictionary."""
+    birthdays[name] = birthday
+
+add_birthday_entry('Elon Musk', '06/28/1971')
+return_birthday('Elon Musk')
