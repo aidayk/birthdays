@@ -2,6 +2,7 @@
 This module provides a simple birthday dictionary and functions
 to display available names and retrieve a person's birthday.
 """
+import calendar
 
 birthdays = {
     'Albert Einstein': '03/14/1879',
@@ -28,5 +29,15 @@ def add_birthday_entry(name, birthday):
     """Adds a new person and birthday to the birthdays dictionary."""
     birthdays[name] = birthday
 
-add_birthday_entry('Elon Musk', '06/28/1971')
-return_birthday('Elon Musk')
+def leap_year_birthdays():
+    """Returns a list of names born in leap years."""
+    leap_people = []
+
+    for name, date in birthdays.items():
+        month, day, year = date.split('/')
+        year = int(year)
+
+        if calendar.isleap(year):
+            leap_people.append(name)
+
+    return leap_people
