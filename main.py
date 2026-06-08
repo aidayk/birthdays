@@ -2,7 +2,7 @@
 
 import argparse
 
-from birthdays import birthdays
+from birthdays import get_birthdays
 from birthdays import return_birthday
 
 #from birthdays import leap_year_birthdays
@@ -10,6 +10,8 @@ from birthdays import return_birthday
 #add_birthday_entry('Albert Gore', '03/31/1948')
 #add_birthday_entry('Elizabeth Bowes-Lyon', '08/04/1900')
 #print(leap_year_birthdays())
+
+birthdays = get_birthdays()
 
 firstnames = []
 lastnames = []
